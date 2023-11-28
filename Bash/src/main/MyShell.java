@@ -60,10 +60,10 @@ public class MyShell {
                 break;
 
             case "rm":
-            System.out.println("in rm");
                 if (commands.length > 1) {
                     boolean recursive = Arrays.asList(commands).contains("-r");
-                    Rm.rm(commands[1], recursive, currentDirectory);
+                    String path = recursive ? commands[2] : commands[1];
+                    Rm.rm(path, recursive, currentDirectory);
                 } else {
                     System.out.println("rm: missing argument");
                 }

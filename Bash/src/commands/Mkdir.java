@@ -3,6 +3,11 @@ package commands;
 import java.io.File;
 
 public class Mkdir {    
+
+    private Mkdir() {
+        
+    }
+
     public static void mkdir(String path) {
             File directory = new File(path);
         if (!directory.exists()) {
